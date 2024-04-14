@@ -14,4 +14,8 @@ public class PosicionService {
   public Posicion savePosicion(Posicion posicion) {
     return posicionRepository.save(posicion);
   }
+
+  public Iterable<Posicion> listarTodos() {
+    return posicionRepository.findAll();
+  }
 }
