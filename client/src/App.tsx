@@ -1,0 +1,11 @@
+import TableComponent from "./components/Table";
+
+function App() {
+  return (
+    <>
+      <h1>Tabla de futbolistas</h1>
+    </>
+  );
+}
+
+export default App;
