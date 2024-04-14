@@ -4,6 +4,7 @@ function App() {
   return (
     <>
       <h1>Tabla de futbolistas</h1>
+      <TableComponent />
     </>
   );
 }
