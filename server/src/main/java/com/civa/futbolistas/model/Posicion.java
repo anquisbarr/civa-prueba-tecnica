@@ -2,6 +2,8 @@ package com.civa.futbolistas.model;
 
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -18,6 +20,7 @@ public class Posicion {
   private String nombre;
 
   @OneToMany(mappedBy = "posicion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @JsonManagedReference
   private Set<Futbolista> futbolistas;
 
   // Getters y Setters

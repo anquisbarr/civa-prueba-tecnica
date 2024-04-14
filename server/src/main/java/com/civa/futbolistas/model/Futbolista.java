@@ -2,6 +2,8 @@ package com.civa.futbolistas.model;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -22,6 +24,7 @@ public class Futbolista {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "posicion_id")
+  @JsonBackReference
   private Posicion posicion;
 
   // Getters and Setters
